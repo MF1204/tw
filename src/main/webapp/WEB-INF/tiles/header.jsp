@@ -9,7 +9,7 @@
 				style="float: none; margin: 0 auto; padding: 0; background-color: aquamarine;">
 				<div class="header">
 					<div class="header-div">
-						<a href="${pageContext.request.contextPath}">
+						<a href="${pageContext.request.contextPath}/">
 							<img src="${pageContext.request.contextPath}/resources/img/mainPageImg/icon_profile.png">
 						</a>
 					</div>
