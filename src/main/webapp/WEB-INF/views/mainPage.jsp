@@ -18,7 +18,7 @@
 					<div class="carousel-inner">
 
 						<div class="item active">
-							<a href="detailBoard/detailPage?bno=28"><img src=" ${pageContext.request.contextPath }/resources/img/detailPageImg/28/6a6641fd47124a808f3fd59382816faa.jpg" alt="CSS"
+							<a href="detailBoard/detailPage?bno=63"><img src=" ${pageContext.request.contextPath }/resources/img/mainPageImg/title1.jpg" alt="CSS"
 								style="width: 735px; height: 485px;"></a>
 							<div class="carousel-caption">
 								<h3></h3>
@@ -27,7 +27,7 @@
 						</div>
 
 						<div class="item">
-							<a href="detailBoard/detailPage?bno=24"><img src="${pageContext.request.contextPath }/resources/img/detailPageImg/24/a8142871a5434305959b449f12036334.jpg" alt="HTML"
+							<a href="detailBoard/detailPage?bno=64"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title3.jpg" alt="HTML"
 								style="width: 735px; height: 485px;"></a>
 							<div class="carousel-caption">
 								<h3></h3>
@@ -36,7 +36,7 @@
 						</div>
 
 						<div class="item">
-							<a href="detailBoard/detailPage?bno=28"><img src="${pageContext.request.contextPath }/resources/img/detailPageImg/27/50db70f7d80047e09b629c9e36cb7e0a.jpg"
+							<a href="detailBoard/detailPage?bno=65"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title4.jpg"
 								alt="jquery" style="width: 735px; height: 485px;"></a>	
 							<div class="carousel-caption">
 								<h3></h3>
