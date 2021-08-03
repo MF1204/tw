@@ -26,6 +26,7 @@ import com.tigerWhale.command.MultipulD_TVO;
 import com.tigerWhale.command.MultipulY_MVO;
 //import com.tigerWhale.command.UserIMGBoardVO;
 import com.tigerWhale.command.UsersVO;
+import com.tigerWhale.command.V_R_BoardVO;
 import com.tigerWhale.command.Y_M_boardVO;
 import com.tigerWhale.command.APP_CONSTANT;
 import com.tigerWhale.command.CategoryBoardVO;
@@ -83,6 +84,28 @@ public class DetailBoardController {
 		
 	}
 	
+	@RequestMapping("/detailWhatIBuy")
+	public String detailWhatIBuy(HttpServletRequest request , Model model) {
+		
+		HttpSession session = request.getSession();
+		System.out.println(session.getAttribute("usersVO"));
+		
+		if(session.getAttribute("usersVO") != null)
+		{
+			model.addAttribute("usersVO", session.getAttribute("usersVO"));
+		}
+		UsersVO vo = (UsersVO)session.getAttribute("usersVO");
+		ArrayList<CustomerBoardVO> customerBoardVO = detailBoardService.getMyCustomer(vo.getUser_ID());
+		System.out.println("**************************************");
+		System.out.println(vo.getUser_ID());
+		System.out.println(customerBoardVO);
+		System.out.println("**************************************");
+		model.addAttribute("customerBoardVO", customerBoardVO);
+
+		return "detailBoard/detailWhatIBuy";
+		
+		
+	}
 	
 	
 	@RequestMapping("/detailWriteMentee")
@@ -109,9 +132,9 @@ public class DetailBoardController {
 	
 	@RequestMapping("/detailDelete")
 	public String detailDelete(@RequestParam(value="bno") int bno ) {
-		System.out.println("카무이!!!!!!!!!!!!!!!!!!!!!");
 		int delte = detailBoardService.mainBoarddelete(bno);
 
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		return "redirect:/"; //홈
 		
 		
@@ -123,8 +146,11 @@ public class DetailBoardController {
 
 		System.out.println(bno);
 		//===============================================
-		
-		//
+		V_R_BoardVO voBoardVOVO = detailBoardService.getViewNum(bno);
+		System.out.println(voBoardVOVO);
+		int viewNum = voBoardVOVO.getViewNum()+1;
+		int voBoardVO = detailBoardService.updateViewNum(bno, viewNum);
+		model.addAttribute("viewNum", viewNum);
 		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		HttpSession session = request.getSession();
 		UsersVO userVO =  (UsersVO)session.getAttribute("usersVO");
@@ -183,10 +209,10 @@ public class DetailBoardController {
 		File folder = new File(APP_CONSTANT.UPLOAD_PATH +"\\detailPageImg");
 		String uploadPath = folder.getPath();
 		
-		CustomerBoardVO customerBoardVO = detailBoardService.getCustomerBoard(user_ID);
+		CustomerBoardVO customerBoardVO = detailBoardService.getCustomerBoard(user_ID , bno);
 		
-
 		
+		model.addAttribute("voBoardVO", voBoardVO);
 		model.addAttribute("customerBoardVO", customerBoardVO);
 		model.addAttribute("m_boardVOFirst", m_boardVOFirst);
 		model.addAttribute("detaiBoardVO", detaiBoardVO);
@@ -367,7 +393,7 @@ public class DetailBoardController {
 				System.out.println("fileRealName "+fileRealName);
 				
 				
-				File folder = new File(APP_CONSTANT.UPLOAD_PATH  + "\\detailPageImg"+"\\" + bno); //폴더를 만들위치
+				File folder = new File(APP_CONSTANT.UPLOAD_PATH  + "/detailPageImg"+"/" + bno); //폴더를 만들위치
 				
 				if(!folder.exists()) {
 					folder.mkdir(); //폴더생성
@@ -386,7 +412,7 @@ public class DetailBoardController {
 				//저장된 전체경로
 				String uploadPath = folder.getPath(); //폴더명을 포함한 경로
 				System.out.println(uploadPath);
-				File saveFile = new File(uploadPath  + "\\"+ fileName); //업로드 경로
+				File saveFile = new File(uploadPath  + "/"+ fileName); //업로드 경로
 				System.out.println("saveFile "+saveFile);
 				
 				
