@@ -432,7 +432,7 @@ public class DetailBoardController {
 		RA.addAttribute("bno", bno);
 		System.out.println("값넘기기" + bno);
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-		return "redirect:/";
+		return "redirect:/detailBoard/detailPage";
 		
 	}
 	
