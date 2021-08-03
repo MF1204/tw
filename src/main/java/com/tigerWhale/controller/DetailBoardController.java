@@ -393,7 +393,7 @@ public class DetailBoardController {
 				System.out.println("fileRealName "+fileRealName);
 				
 				System.out.println("업로드 폴더 생성 try");
-				File folder = new File(APP_CONSTANT.UPLOAD_PATH  + "detailPageImg/" + bno); //폴더를 만들위치
+				File folder = new File(APP_CONSTANT.UPLOAD_PATH + bno); //폴더를 만들위치
 				System.out.println("업로드 폴더 생성 success");
 				if(!folder.exists()) {
 					folder.mkdir(); //폴더생성
