@@ -28,6 +28,7 @@ import com.tigerWhale.command.MultipulY_MVO;
 import com.tigerWhale.command.UsersVO;
 import com.tigerWhale.command.V_R_BoardVO;
 import com.tigerWhale.command.Y_M_boardVO;
+import com.tigerWhale.command.APP_CONSTANT;
 import com.tigerWhale.command.CategoryBoardVO;
 import com.tigerWhale.command.CustomerBoardVO;
 import com.tigerWhale.command.DetailBoardVO;
@@ -135,7 +136,7 @@ public class DetailBoardController {
 		int delte = detailBoardService.mainBoarddelete(bno);
 
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-		return "redirect:/"; //홈
+		return "redirect://"; //홈
 		
 		
 	}
@@ -412,7 +413,7 @@ public class DetailBoardController {
 				//저장된 전체경로
 				String uploadPath = folder.getPath(); //폴더명을 포함한 경로
 				System.out.println(uploadPath);
-				File saveFile = new File(uploadPath + fileName); //업로드 경로
+				File saveFile = new File(uploadPath + '/' + fileName); //업로드 경로
 				System.out.println("saveFile "+saveFile);
 				
 				
