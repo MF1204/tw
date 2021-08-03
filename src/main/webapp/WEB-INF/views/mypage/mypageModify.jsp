@@ -77,13 +77,13 @@
 				var writer = '${sessionScope.usersVO.user_ID}';
 				var file = $("#file").val();
 				file = file.slice(file.lastIndexOf(".", file.length), file.length);
-				// console.log(file);
+				console.log(file);
 				console.log("////////////////////////");
 				if (file != '.jpg' && file != '.PNG' && file != '.bmp') {
 					alert("이미지 형태만 등록합니다");
 					return;
 				} else if (writer == false) {
-
+					alert("false");
 				}
 
 				var formData = new FormData();
@@ -93,7 +93,7 @@
 				console.log("file", $("#file")[0].files[0]);
 				console.log("#############");
 			
-
+				console.log(formData);
 
 				$.ajax({
 					type: "post",
@@ -110,7 +110,7 @@
 						if (data == "success") {
 							$("#file").val("");
 							$(".user-profile-picture").css("display", "none");
-
+							console.log('fuck');
 						}
 					},
 				})
