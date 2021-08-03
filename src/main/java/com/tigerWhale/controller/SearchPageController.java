@@ -87,6 +87,7 @@ public class SearchPageController {
 		model.addAttribute("bigTitle", bigTitle); //화면에 들어갈 bigCategory명
 		model.addAttribute("middleList", middleList);
 		model.addAttribute("smallList", smallList);
+		model.addAttribute("bigList", bigList);
 		model.addAttribute("thumbnailList", thumbnailList);
 		model.addAttribute("pageVO", pageVO);
 		return "searchPage";
