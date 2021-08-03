@@ -211,7 +211,7 @@
 						<ul class="hostInfo">
 							<li class="host_name">
 								<div class="host_img_wrap">
-									<img src="../resources/img/userIMG/${usersVO.user_IMG}.jpg">
+									<img src="img/userIMG/${usersVO.user_IMG}.jpg">
 								</div>
 								<div class="host_name_wrap">${usersVO.user_ID}</div>
 							</li>
@@ -250,7 +250,7 @@
 
 				<form class="reply-wrap">
 					<div class="reply-image">
-						<img src="../resources/img/userIMG/${userVO.user_IMG}.jpg">
+						<img src="img/userIMG/${userVO.user_IMG}.jpg">
 					</div>
 					<!--form-control은 부트스트랩의 클래스입니다 (name기술)-->
 					<div class="reply-content">
@@ -425,7 +425,7 @@
                 	
     				strAdd += "<div class='reply-wrap'>";
     				strAdd += "<div class='reply-image'>";
-                    strAdd += "<img src='../resources/img/userIMG/"+ data[i].user_ID +".jpg'>";
+                    strAdd += "<img src='img/userIMG/"+ data[i].user_ID +".jpg'>";
                     strAdd += "</div>";
                     strAdd += "<div class='reply-content'>";
                     strAdd += "<div class='reply-group'>";

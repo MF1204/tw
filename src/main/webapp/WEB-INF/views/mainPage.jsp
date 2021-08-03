@@ -475,7 +475,7 @@
 				            {
 				                nearLocalAdd += '<li class="col-xs-6 col-sm-4 col-md-3 col-lg-3 lecture-ad">'
 								nearLocalAdd += '<div class="recommand-lecture " >'
-								nearLocalAdd += '<img src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="es6" style= width="167; height=167;" >'
+								nearLocalAdd += '<img src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="es6" style= width="167; height=167;" >'
 								nearLocalAdd += '<div class="lecture-content">'
 								nearLocalAdd += '<p>'+data[i].title+'</p>'
 								nearLocalAdd += '</div>'
@@ -512,7 +512,7 @@
 				            {
 				                nearLocalAdd += '<li class="col-xs-6 col-sm-4 col-md-3 col-lg-3 lecture-ad">'
 								nearLocalAdd += '<div class="recommand-lecture detailBtn">'
-								nearLocalAdd += '<img src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="es6" style= width="167; height=167; >'
+								nearLocalAdd += '<img src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="es6" style= width="167; height=167; >'
 								nearLocalAdd += '<div class="lecture-content">'
 								nearLocalAdd += '<p>'+data[i].title+'</p>'
 								nearLocalAdd += '</div>'
@@ -552,50 +552,7 @@
 					}
 				});
 			}
-			
-		
-			
-			
-			
-			
-            function getPopularPage()
-            {
-				$.ajax({
-					type: "post",
-					url : "getPopularPage",
-					dataType: "json",
-					contentType : "application/json; charset=UTF-8",
-					success: function(data){
-						
-						
-						var popluarIndex = sessionStorage.getItem("popluarIndex");
-						sessionStorage.setItem("popluarData" , data.length);	
-											
-							/*인기회원의 게시글 게시글*/
-							var popularAdd ="";
-			                for(var i = popluarIndex-8; i < popluarIndex; i++) 
-			                {
-			                	popularAdd += '<li class="col-xs-6 col-sm-4 col-md-3 col-lg-3 lecture-ad">'
-			                	popularAdd += '<div class="recommand-lecture">'
-			                	popularAdd += '<img src="${pageContext.request.contextPath }/resources/img/mainPageImg/java.png" alt="java">'
-			                	popularAdd += '<div class="lecture-content">'
-			                	popularAdd += '<p>'+data[i].title+'</p>'
-			                	popularAdd += '</div>'
-			                	popularAdd += '<div class="lecture-hover">'
-			                	popularAdd += '<a href="detailBoard/detailPage?bno='+data[i].bno+'"></a>'
-			                	popularAdd += '</div>'
-			                	popularAdd += '</div>'
-			                	popularAdd += '</li>'
-			                }
-			                $(".popularAdd").html(popularAdd);
-	
-					},
-					error : function(status,error){
-						console.log(error);
-					}
-				});
-            }
-			
+					
             function getRecentBoard()
             {
             	
@@ -622,7 +579,7 @@
 			                {
 			                	newAdd += '<li class="col-xs-6 col-sm-4 col-md-3 col-lg-3 lecture-ad">'
 			                	newAdd += '<div class="recommand-lecture">'
-			                	newAdd += '<img src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="spring" style= width="167; height=167;>'
+			                	newAdd += '<img src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="spring" style= width="167; height=167;>'
 			                	newAdd += '<div class="lecture-content">'
 			                	newAdd += '<p>'+data[i].title+'</p>'
 			                	newAdd += '</div>'
@@ -639,7 +596,7 @@
 			                {
 			                	newAdd += '<li class="col-xs-6 col-sm-4 col-md-3 col-lg-3 lecture-ad">'
 			                	newAdd += '<div class="recommand-lecture">'
-			                	newAdd += '<img src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="spring" style= width="167; height=167;>'
+			                	newAdd += '<img src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" alt="spring" style= width="167; height=167;>'
 			                	newAdd += '<div class="lecture-content">'
 			                	newAdd += '<p>'+data[i].title+'</p>'
 			                	newAdd += '</div>'
@@ -702,7 +659,7 @@
 							    bestAdd += '<div class="thumbnail-recent">'
 								bestAdd += '<div class="thumbnail-recent">'
 								bestAdd += '<div class="thumbnail-area">'
-								bestAdd += '<a href="detailBoard/detailPage?bno='+data[i].bno+'" class="thumbnail-inner"> <img class="img-post" alt="postthumbnail" src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" style= width="167; height=167;" >'
+								bestAdd += '<a href="detailBoard/detailPage?bno='+data[i].bno+'" class="thumbnail-inner"> <img class="img-post" alt="postthumbnail" src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" style= width="167; height=167;" >'
 								bestAdd += '</a> <a href="detailBoard/detailPage?bno='+data[i].bno+'" class="button-more-img"> <i class="sp_common icon_more"><span class="blind">글 썸네일 펼치기</span></i>'
 								bestAdd += '</a>'
 								bestAdd += '<div class="plus-thumbnail-list">'
@@ -713,7 +670,7 @@
 									for(var j=1; j<4; j++ )
 									{
 										bestAdd += '<div class="plus-list">'
-										bestAdd += '<img class="plus-img" alt="추가이미지" width="167" height="167" src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[j].img+'" >'
+										bestAdd += '<img class="plus-img" alt="추가이미지" width="167" height="167" src="img/'+data[i].bno+'/'+data[i].imgBoardList[j].img+'" >'
 										bestAdd += '</div>'
 										if(data[i].imgBoardList.length-1 == j)	break;
 									}
@@ -755,7 +712,7 @@
 								    bestAdd += '<div class="thumbnail-recent">'
 									bestAdd += '<div class="thumbnail-recent">'
 									bestAdd += '<div class="thumbnail-area">'
-									bestAdd += '<a href="detailBoard/detailPage?bno='+data[i].bno+'" class="thumbnail-inner"> <img class="img-post" alt="postthumbnail" src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" width="167" height="167">'
+									bestAdd += '<a href="detailBoard/detailPage?bno='+data[i].bno+'" class="thumbnail-inner"> <img class="img-post" alt="postthumbnail" src="img/'+data[i].bno+'/'+data[i].imgBoardList[0].img+'" width="167" height="167">'
 									bestAdd += '</a> <a href="detailBoard/detailPage?bno='+data[i].bno+'" class="button-more-img"> <i class="sp_common icon_more"><span class="blind">글 썸네일 펼치기</span></i>'
 									bestAdd += '</a>'
 									bestAdd += '<div class="plus-thumbnail-list">'
@@ -766,7 +723,7 @@
 										for(var j=1; j<4; j++ )
 										{
 											bestAdd += '<div class="plus-list">'
-											bestAdd += '<img class="plus-img" alt="추가이미지" width="167" height="167" src="${pageContext.request.contextPath }/resources/img/detailPageImg/'+data[i].bno+'/'+data[i].imgBoardList[j].img+'" class ="detailBtn">'
+											bestAdd += '<img class="plus-img" alt="추가이미지" width="167" height="167" src="img/'+data[i].bno+'/'+data[i].imgBoardList[j].img+'" class ="detailBtn">'
 											bestAdd += '</div>'
 											if(data[i].imgBoardList.length-1 == j)		break;
 										}

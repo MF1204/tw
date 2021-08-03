@@ -72,7 +72,7 @@ public class MypageController {
 			usersService.passwordUpdate(vo);
 			session.invalidate();
 			System.out.println("비밀번호 컨트롤러 통과");
-			return "redirect:/";
+			return "redirect://";
 		} else {
 			model.addAttribute("msg", false);
 			return "mypage/mypage-password";
@@ -88,7 +88,7 @@ public class MypageController {
 	@RequestMapping(value = "/phoneForm")
 	public String phoneUsers(UsersVO vo) {
 		usersService.phoneUpdate(vo);
-		return "redirect:/";
+		return "redirect://";
 	}
 
 	@RequestMapping("/mypageModify")
@@ -116,7 +116,7 @@ public class MypageController {
 		if(oldPW.equals(newPW)) {
 			usersService.usersDelete(vo);
 			session.invalidate();
-			return "redirect:/";
+			return "redirect://";
 		} else {
 			model.addAttribute("msg", false);
 			return "mypage/mypageDelete";
@@ -154,7 +154,7 @@ public class MypageController {
 			System.out.println("업로드경로" + uploadPath);
 			System.out.println("업로드파일명" + fileName + fileExtention);
 
-			File saveFile = new File(uploadPath + fileName);
+			File saveFile = new File(uploadPath + '/' + fileName);
 			System.out.println(saveFile);
 			file.transferTo(saveFile);
 			; // 파일 쓰기

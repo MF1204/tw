@@ -21,7 +21,7 @@
 								</c:when>
 								<c:otherwise>
 									<img
-										id = "fileImg" src="${pageContext.request.contextPath}/resources/img/userIMG/${usersVO.user_IMG}.jpg"
+										id = "fileImg" src="img/userIMG/${usersVO.user_IMG}.jpg"
 										class="user-picture" alt="기본이미지">
 								</c:otherwise>
 							</c:choose>

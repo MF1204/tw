@@ -17,7 +17,7 @@
 										class="user-picture" alt="기본이미지">
 								</c:when>
 								<c:otherwise>
-									<img id = "fileImg" class="user-picture" src="${pageContext.request.contextPath}/resources/img/userIMG/${usersVO.user_IMG}.jpg">
+									<img id = "fileImg" class="user-picture" src="img/userIMG/${usersVO.user_IMG}.jpg">
 								</c:otherwise>
 							</c:choose>
 						</div>

@@ -193,7 +193,7 @@
                                                     
                                                     <img title="${thumbnail.title}"
                                                         alt="${thumbnail.title}"
-                                                        src="${pageContext.request.contextPath }/resources/img/detailPageImg/${thumbnail.bno}/${thumbnail.img}" loading="lazy"
+                                                        src="img/${thumbnail.bno}/${thumbnail.img}" loading="lazy"
                                                         class="css-d1mg3o ejobblq0">
                                                     
                                                 </div>
