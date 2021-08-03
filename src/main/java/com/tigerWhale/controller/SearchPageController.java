@@ -36,6 +36,7 @@ public class SearchPageController {
 		//화면에 넘어갈 카테고리 분류
 		ArrayList<CategoryBoardVO> middleList = new ArrayList<>();
 		ArrayList<CategoryBoardVO> smallList = new ArrayList<>();
+		ArrayList<CategoryBoardVO> bigList = new ArrayList<>();
 		//화면에 넘어갈 게시물
 		String criType = "";
 		ArrayList<MainBoardVO> pageList = new ArrayList<>();
@@ -66,6 +67,7 @@ public class SearchPageController {
 			model.addAttribute("path", getPath);
 		} else if(cri.getSearchType().equals("head")) {
 			criType = "head";
+			bigList = searchPageService.getBigList();
 		}
 		cri.setSearchType(criType);
 		

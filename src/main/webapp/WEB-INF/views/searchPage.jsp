@@ -9,6 +9,21 @@
                         <h1 class="title-head-content">${bigTitle}</h1>
                         <div class="title-content1">
                         
+                        	<c:if test="${cri.searchType eq 'head'}">
+                        		<c:forEach var="vo" items="${bigList}">
+                        			<div class="content-list">
+                        				<a href="searchPage?searchType=middleCategory&typeValue=${vo.bigCategory}" class="list-link">${vo.bigCategory}</a>
+                                		<button class="side-list-btn">
+                                			<span role="img" rotate="0" class="ebpz7lm2">
+                                				<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n">
+                                           			<path xmlns="http://www.w3.org/2000/svg" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+                                        		</svg>
+                                    		</span>
+                                		</button>
+                        			</div>
+                        		</c:forEach>
+                        	</c:if>
+                        
                             <!-- big카테고리에 속하는 middle카테고리 리스트 -->
                             <c:forEach var="vo" items="${middleList}">
                         	<div class="content-list">

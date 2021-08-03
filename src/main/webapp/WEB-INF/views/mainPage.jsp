@@ -18,7 +18,7 @@
 					<div class="carousel-inner">
 
 						<div class="item active">
-							<a href="detailBoard/detailPage?bno=63"><img src=" ${pageContext.request.contextPath }/resources/img/mainPageImg/title1.jpg" alt="CSS"
+							<a href="detailBoard/detailPage?bno=64"><img src=" ${pageContext.request.contextPath }/resources/img/mainPageImg/title1.jpg" alt="CSS"
 								style="width: 735px; height: 485px;"></a>
 							<div class="carousel-caption">
 								<h3></h3>
@@ -27,7 +27,7 @@
 						</div>
 
 						<div class="item">
-							<a href="detailBoard/detailPage?bno=64"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title3.jpg" alt="HTML"
+							<a href="detailBoard/detailPage?bno=65"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title3.jpg" alt="HTML"
 								style="width: 735px; height: 485px;"></a>
 							<div class="carousel-caption">
 								<h3></h3>
@@ -36,7 +36,7 @@
 						</div>
 
 						<div class="item">
-							<a href="detailBoard/detailPage?bno=65"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title4.jpg"
+							<a href="detailBoard/detailPage?bno=66"><img src="${pageContext.request.contextPath }/resources/img/mainPageImg/title4.jpg"
 								alt="jquery" style="width: 735px; height: 485px;"></a>	
 							<div class="carousel-caption">
 								<h3></h3>

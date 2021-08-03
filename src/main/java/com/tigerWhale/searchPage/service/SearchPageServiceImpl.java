@@ -36,6 +36,11 @@ public class SearchPageServiceImpl implements SearchPageService {
 	public ArrayList<CategoryBoardVO> getSmallList(String bigCategory) {
 		return searchPageMapper.getSmallList(bigCategory);
 	}
+	
+	@Override
+	public ArrayList<CategoryBoardVO> getBigList() {
+		return searchPageMapper.getBigList();
+	}
 
 	@Override
 	public ArrayList<MainBoardVO> getList(SearchPageCriteria cri) {

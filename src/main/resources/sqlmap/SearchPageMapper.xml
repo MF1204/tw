@@ -23,6 +23,10 @@
 	<select id="getSmallList" resultType="CategoryBoardVO">
 		select * from CATEGORYBOARD where bigCategory = #{bigCategory}
 	</select>
+	
+	<select id="getBigList" resultType="CategoryBoardVO">
+		select distinct bigCategory from CATEGORYBOARD
+	</select>
 
 <!-- 게시판에서 검색 -->
 	

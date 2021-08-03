@@ -14,6 +14,7 @@ public interface SearchPageMapper {
 	public CategoryBoardVO getBig(int c_code);
 	public ArrayList<CategoryBoardVO> getMiddleList(String bigCategory);
 	public ArrayList<CategoryBoardVO> getSmallList(String bigCategory);
+	public ArrayList<CategoryBoardVO> getBigList();
 	public ArrayList<MainBoardVO> getList(SearchPageCriteria cri);
 	public int searchTotal(SearchPageCriteria cri);
 	public ArrayList<ThumbnailBoardVO> keywordSearch(SearchPageCriteria cri);
