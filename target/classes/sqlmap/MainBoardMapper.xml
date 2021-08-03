@@ -31,7 +31,7 @@
 		    on vr.bno = ma.bno
 		)a
 		INNER JOIN IMGBOARD b
-		ON a.bno = b.bno group by a.bno order by viewNum desc ;
+		ON a.bno = b.bno order by viewNum desc ;
 	</select>
 	
 	<resultMap type="MainBoardVO" id="bestImgInfo">
