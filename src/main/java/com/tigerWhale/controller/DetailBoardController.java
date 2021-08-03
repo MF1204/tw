@@ -207,7 +207,7 @@ public class DetailBoardController {
 		System.out.println("m_boardVOFirst " + m_boardVOFirst);
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@");
 		
-		File folder = new File(APP_CONSTANT.UPLOAD_PATH +"\\detailPageImg");
+		File folder = new File(APP_CONSTANT.UPLOAD_PATH +"detailPageImg");
 		String uploadPath = folder.getPath();
 		
 		CustomerBoardVO customerBoardVO = detailBoardService.getCustomerBoard(user_ID , bno);
