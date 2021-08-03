@@ -12,14 +12,7 @@
                         	<c:if test="${cri.searchType eq 'head'}">
                         		<c:forEach var="vo" items="${bigList}">
                         			<div class="content-list">
-                        				<a href="searchPage?searchType=middleCategory&typeValue=${vo.bigCategory}" class="list-link">${vo.bigCategory}</a>
-                                		<button class="side-list-btn">
-                                			<span role="img" rotate="0" class="ebpz7lm2">
-                                				<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n">
-                                           			<path xmlns="http://www.w3.org/2000/svg" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-                                        		</svg>
-                                    		</span>
-                                		</button>
+                        				<a href="${pageContext.request.contextPath}/searchPage?searchType=bigCategory&typeValue=${vo.bigCategory}" class="list-link">${vo.bigCategory}</a>
                         			</div>
                         		</c:forEach>
                         	</c:if>
