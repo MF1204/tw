@@ -49,11 +49,11 @@ public class DetailBoardController {
 	
 	
 	@RequestMapping("/detailWrite")
-	public String detailWrite(HttpSession session, Model model) throws Exception {
+	public String detailWrite(HttpServletRequest request, Model model) throws Exception {
 		ArrayList<CategoryBoardVO> categoryBoardVO = detailBoardService.getCataGoryALL();
 
 
-		session = (HttpSession)session.getAttribute("usersVO");
+		HttpSession session = request.getSession();
 		System.out.println(session.getAttribute("usersVO"));
 		
 		if(session.getAttribute("usersVO") != null)
@@ -432,7 +432,7 @@ public class DetailBoardController {
 		RA.addAttribute("bno", bno);
 		System.out.println("값넘기기" + bno);
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-		return "redirect:/detailBoard/detailPage";
+		return "redirect:/";
 		
 	}
 	
