@@ -56,7 +56,7 @@ public class MypageController {
 		System.out.println(vo.toString());
 		usersService.emailUpdate(vo);
 
-		return "redirect://";
+		return "redirect:/";
 	}
 
 	@RequestMapping("/mypage-password")
@@ -72,7 +72,7 @@ public class MypageController {
 			usersService.passwordUpdate(vo);
 			session.invalidate();
 			System.out.println("비밀번호 컨트롤러 통과");
-			return "redirect://";
+			return "redirect:/";
 		} else {
 			model.addAttribute("msg", false);
 			return "mypage/mypage-password";
@@ -88,7 +88,7 @@ public class MypageController {
 	@RequestMapping(value = "/phoneForm")
 	public String phoneUsers(UsersVO vo) {
 		usersService.phoneUpdate(vo);
-		return "redirect://";
+		return "redirect:/";
 	}
 
 	@RequestMapping("/mypageModify")
@@ -116,7 +116,7 @@ public class MypageController {
 		if(oldPW.equals(newPW)) {
 			usersService.usersDelete(vo);
 			session.invalidate();
-			return "redirect://";
+			return "redirect:/";
 		} else {
 			model.addAttribute("msg", false);
 			return "mypage/mypageDelete";

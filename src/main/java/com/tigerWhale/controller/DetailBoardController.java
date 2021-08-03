@@ -49,11 +49,11 @@ public class DetailBoardController {
 	
 	
 	@RequestMapping("/detailWrite")
-	public String detailWrite( HttpServletRequest request , Model model) throws Exception {
+	public String detailWrite(HttpSession session, Model model) throws Exception {
 		ArrayList<CategoryBoardVO> categoryBoardVO = detailBoardService.getCataGoryALL();
 
 
-		HttpSession session = request.getSession();
+		session = (HttpSession)session.getAttribute("usersVO");
 		System.out.println(session.getAttribute("usersVO"));
 		
 		if(session.getAttribute("usersVO") != null)
@@ -136,7 +136,7 @@ public class DetailBoardController {
 		int delte = detailBoardService.mainBoarddelete(bno);
 
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-		return "redirect://"; //홈
+		return "redirect:/"; //홈
 		
 		
 	}

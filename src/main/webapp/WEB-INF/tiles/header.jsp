@@ -12,7 +12,7 @@
 						</a>
 					</div>
 					<div class="search-tag header-div">
-						<form action="http://localhost:8181/project/searchPage" method="get">
+						<form action="http://15.165.22.75/searchPage" method="get">
 							
                             <span class="head-select">
                                 <select name="searchType2" class="select-head">

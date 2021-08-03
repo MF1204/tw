@@ -79,7 +79,7 @@
 				file = file.slice(file.lastIndexOf(".", file.length), file.length);
 				console.log(file);
 				console.log("////////////////////////");
-				if (file != '.jpg' && file != '.PNG' && file != '.bmp') {
+				if (file != '.jpeg' && file != '.JPG' && file != '.jpg' && file != '.PNG' && file != '.bmp') {
 					alert("이미지 형태만 등록합니다");
 					return;
 				} else if (writer == false) {
