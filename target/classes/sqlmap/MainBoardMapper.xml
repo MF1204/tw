@@ -64,10 +64,9 @@
 			            from V_R_BOARD vr
 			            inner join MAINBOARD ma
 			            on vr.bno = ma.bno
-			            order by vr.bno desc
 			) a
 			INNER JOIN IMGBOARD b
-			ON a.bno = b.bno
+			ON a.bno = b.bno order by a.bno desc
 	</select>
 	
 	<resultMap type="MainBoardVO" id="recentImgInfo">
