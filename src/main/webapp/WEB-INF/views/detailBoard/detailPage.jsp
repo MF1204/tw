@@ -31,11 +31,11 @@
 									<div class="carousel-inner" role="listbox">
 
 										<div class="item active">
-											<img src="../resources/img/detailPageImg/${mainBoardVO.bno}/${IMGBoardVO[0].img}" alt="Chania" width="460" height="345">
+											<img src="/var/upload/${mainBoardVO.bno}/${IMGBoardVO[0].img}" alt="Chania" width="460" height="345">
 										</div>
 										<c:forEach var="vo" items="${IMGBoardVO}" begin="1">
 											<div class="item">
-												<img src="../resources/img/detailPageImg/${mainBoardVO.bno}/${vo.img}" alt="Chania" width="460" height="345">
+												<img src="var/upload/${mainBoardVO.bno}/${vo.img}" alt="Chania" width="460" height="345">
 											</div>
 										</c:forEach>
 									</div>
