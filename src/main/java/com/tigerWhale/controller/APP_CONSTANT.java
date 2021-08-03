@@ -1,4 +1,4 @@
-package com.tigerWhale.command;
+package com.tigerWhale.controller;
 
 public class APP_CONSTANT {
 

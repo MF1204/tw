@@ -28,7 +28,6 @@ import com.tigerWhale.command.MultipulY_MVO;
 import com.tigerWhale.command.UsersVO;
 import com.tigerWhale.command.V_R_BoardVO;
 import com.tigerWhale.command.Y_M_boardVO;
-import com.tigerWhale.command.APP_CONSTANT;
 import com.tigerWhale.command.CategoryBoardVO;
 import com.tigerWhale.command.CustomerBoardVO;
 import com.tigerWhale.command.DetailBoardVO;
@@ -207,7 +206,7 @@ public class DetailBoardController {
 		System.out.println("m_boardVOFirst " + m_boardVOFirst);
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@");
 		
-		File folder = new File(APP_CONSTANT.UPLOAD_PATH +"\\detailPageImg");
+		File folder = new File(APP_CONSTANT.UPLOAD_PATH +"detailPageImg");
 		String uploadPath = folder.getPath();
 		
 		CustomerBoardVO customerBoardVO = detailBoardService.getCustomerBoard(user_ID , bno);
@@ -393,9 +392,9 @@ public class DetailBoardController {
 				String fileRealName = imgList.get(i).getFile().getOriginalFilename();
 				System.out.println("fileRealName "+fileRealName);
 				
-				
+				System.out.println("업로드 폴더 생성 try");
 				File folder = new File(APP_CONSTANT.UPLOAD_PATH  + "detailPageImg/" + bno); //폴더를 만들위치
-				
+				System.out.println("업로드 폴더 생성 success");
 				if(!folder.exists()) {
 					folder.mkdir(); //폴더생성
 				}
